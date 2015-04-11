@@ -82,9 +82,16 @@
     <!-- A reference to the entire .Net Framework and Windows SDK are automatically included -->
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="API\MeliAPI.cs" />
     <Compile Include="App.xaml.cs">
       <DependentUpon>App.xaml</DependentUpon>
     </Compile>
+    <Compile Include="Common\CategoryChildrenInfo.cs" />
+    <Compile Include="Common\CategoryInfo.cs" />
+    <Compile Include="Common\Location.cs" />
+    <Compile Include="Common\SellerAddress.cs" />
+    <Compile Include="Common\SellerInfo.cs" />
+    <Compile Include="Common\ServiceInfo.cs" />
     <Compile Include="MainPage.xaml.cs">
       <DependentUpon>MainPage.xaml</DependentUpon>
     </Compile>

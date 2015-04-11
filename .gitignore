@@ -41,3 +41,10 @@ $RECYCLE.BIN/
 Network Trash Folder
 Temporary Items
 .apdisk
+*.suo
+MeliHackPhone/MeliHackPhone/obj/Debug/App.g.cs
+MeliHackPhone/MeliHackPhone/obj/Debug/DesignTimeResolveAssemblyReferencesInput.cache
+MeliHackPhone/MeliHackPhone/obj/Debug/MainPage.g.cs
+MeliHackPhone/MeliHackPhone/obj/Debug/MainPage.g.i.cs
+MeliHackPhone/MeliHackPhone/obj/Debug/XamlSaveStateFile.xml
+MeliHackPhone/MeliHackPhone/obj/Debug/XamlTypeInfo.g.cs

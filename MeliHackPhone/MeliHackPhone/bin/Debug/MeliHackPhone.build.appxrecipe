@@ -1,0 +1,70 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Machine>LUIS-PC</Machine>
+    <WindowsUser>Luis</WindowsUser>
+    <TargetPlatformIdentifier>WindowsPhoneApp</TargetPlatformIdentifier>
+    <SolutionConfiguration>Debug|AnyCPU</SolutionConfiguration>
+    <PackageArchitecture>neutral</PackageArchitecture>
+    <PackageIdentityName>3a95f5a1-e4ba-4750-a35e-505f699e49ff</PackageIdentityName>
+    <IntermediateOutputPath>C:\Solutions\MeliHackPhone\MeliHackPhone\MeliHackPhone\obj\Debug\</IntermediateOutputPath>
+  </PropertyGroup>
+  <ItemGroup>
+    <AppXManifest Include="C:\Solutions\MeliHackPhone\MeliHackPhone\MeliHackPhone\bin\Debug\AppxManifest.xml">
+      <PackagePath>AppxManifest.xml</PackagePath>
+      <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
+    </AppXManifest>
+  </ItemGroup>
+  <ItemGroup>
+    <AppxPackagedFile Include="C:\Solutions\MeliHackPhone\MeliHackPhone\MeliHackPhone\bin\Debug\MeliHackPhone.exe">
+      <PackagePath>MeliHackPhone.exe</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Solutions\MeliHackPhone\MeliHackPhone\MeliHackPhone\Assets\Logo.scale-240.png">
+      <PackagePath>Assets\Logo.scale-240.png</PackagePath>
+      <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Solutions\MeliHackPhone\MeliHackPhone\MeliHackPhone\Assets\SmallLogo.scale-240.png">
+      <PackagePath>Assets\SmallLogo.scale-240.png</PackagePath>
+      <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Solutions\MeliHackPhone\MeliHackPhone\MeliHackPhone\Assets\SplashScreen.scale-240.png">
+      <PackagePath>Assets\SplashScreen.scale-240.png</PackagePath>
+      <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Solutions\MeliHackPhone\MeliHackPhone\MeliHackPhone\Assets\Square71x71Logo.scale-240.png">
+      <PackagePath>Assets\Square71x71Logo.scale-240.png</PackagePath>
+      <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Solutions\MeliHackPhone\MeliHackPhone\MeliHackPhone\Assets\StoreLogo.scale-240.png">
+      <PackagePath>Assets\StoreLogo.scale-240.png</PackagePath>
+      <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Solutions\MeliHackPhone\MeliHackPhone\MeliHackPhone\Assets\WideLogo.scale-240.png">
+      <PackagePath>Assets\WideLogo.scale-240.png</PackagePath>
+      <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Solutions\MeliHackPhone\MeliHackPhone\MeliHackPhone\Assets\own.png">
+      <PackagePath>Assets\own.png</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Solutions\MeliHackPhone\MeliHackPhone\MeliHackPhone\Assets\service.png">
+      <PackagePath>Assets\service.png</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Solutions\MeliHackPhone\MeliHackPhone\MeliHackPhone\bin\Debug\App.xbf">
+      <PackagePath>App.xbf</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Solutions\MeliHackPhone\MeliHackPhone\MeliHackPhone\bin\Debug\MainPage.xbf">
+      <PackagePath>MainPage.xbf</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Solutions\MeliHackPhone\MeliHackPhone\MeliHackPhone\bin\Debug\Services.xbf">
+      <PackagePath>Services.xbf</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Solutions\MeliHackPhone\MeliHackPhone\MeliHackPhone\bin\Debug\MeliHackPhone.xr.xml">
+      <PackagePath>MeliHackPhone.xr.xml</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Solutions\MeliHackPhone\MeliHackPhone\MeliHackPhone\bin\Debug\resources.pri">
+      <PackagePath>resources.pri</PackagePath>
+    </AppxPackagedFile>
+  </ItemGroup>
+  <ItemGroup>
+  </ItemGroup>
+</Project>
