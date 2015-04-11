@@ -46,8 +46,8 @@ namespace MeliHackPhone
             // this event is handled for you.
 
             // Get all Initial service categories.
-            String MeliAPI.getCategoryInformationAndChildrenCategories("MLA1540");
-      
+            String categoryInfo = MeliAPI.getCategoryInformationAndChildrenCategories("MLU1540");
+            Int32 pepe = 0;
 
         
 }

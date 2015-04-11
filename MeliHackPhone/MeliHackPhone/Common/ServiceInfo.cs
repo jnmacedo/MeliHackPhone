@@ -8,5 +8,9 @@ namespace MeliHackPhone.Common
 {
     public class ServiceInfo
     {
+        public String Title { get; set; }
+        public String Subtitle { get; set; }
+        public String Price { get; set; }
+        public String PublicationURL { get; set; }
     }
 }

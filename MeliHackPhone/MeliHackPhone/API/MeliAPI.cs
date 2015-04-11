@@ -1,4 +1,5 @@
-﻿using System;
+﻿using MeliHackPhone.Common;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Net.Http;
@@ -13,7 +14,7 @@ namespace MeliHackPhone.API
         {
             String jsonResponse = "";
 
-            String url = "https://api.mercadolibre.com/sites/MLA/search?category=" + categoryId;
+            String url = "https://api.mercadolibre.com/sites/MLU/search?category=" + categoryId;
 
             Task<String> response = MeliAPI.getRestCall(url);
 
@@ -45,6 +46,18 @@ namespace MeliHackPhone.API
             String responseData = await response.Content.ReadAsStringAsync();
 
             return responseData;
+        }
+
+        private CategoryInfo parseCategoryJSON(String categoryJSON)
+        {
+            CategoryInfo ci = new CategoryInfo();
+            return ci;
+        }
+
+        private List<ServiceInfo> parseServiceInfoJSON(String serviceInfoJSON)
+        {
+            List<ServiceInfo> servicesInCategory = new List<ServiceInfo>();
+            return servicesInCategory;
         }
 
         
