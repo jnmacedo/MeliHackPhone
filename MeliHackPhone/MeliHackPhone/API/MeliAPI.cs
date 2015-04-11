@@ -1,6 +1,7 @@
 ﻿using MeliHackPhone.Common;
 using System;
 using System.Collections.Generic;
+using System.Diagnostics;
 using System.Linq;
 using System.Net.Http;
 using System.Text;
@@ -31,7 +32,7 @@ namespace MeliHackPhone.API
 
             Task<String> response = MeliAPI.getRestCall(url);
 
-            jsonResponse = response.ToString();
+            jsonResponse = response.Result.ToString();
 
             return jsonResponse;
         }
@@ -43,7 +44,9 @@ namespace MeliHackPhone.API
             HttpRequestMessage request = new HttpRequestMessage(HttpMethod.Get, url);
 
             var response = await client.SendAsync(request);
+            Debug.WriteLine("response content: " + response.Content);
             String responseData = await response.Content.ReadAsStringAsync();
+            //Debug.WriteLine("response reponse data: " + response.Content);
 
             return responseData;
         }
