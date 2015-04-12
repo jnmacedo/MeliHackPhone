@@ -1,6 +1,6 @@
 # MeliHackPhone
 
-Agregamos todos los changeset ocurridos en TFDS (visual studio online) que utilizamo durante todo el dia. Se
+Agregamos todos los changeset ocurridos en TFS (visual studio online) que utilizamo durante todo el dia. Se
 adjunta un documento word con los lilnks de todos los mismos en el root de la solución.
 
 pmaceiras.visualstudio.com
