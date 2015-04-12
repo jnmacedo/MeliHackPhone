@@ -8,8 +8,9 @@ namespace MeliHackPhone.Common
 {
     public class Location
     {
-        public String AdressLine { get; set; }
-        public String City { get; set; }
+        public String Address_Line { get; set; }
+        public String Zip_code { get; set; }
+        public String Subneighborhood { get; set; }
         public String Latitude { get; set; }
         public String Longitude { get; set; }
     }

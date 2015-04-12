@@ -8,6 +8,28 @@
     mc:Ignorable="d"
     Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
 
+    <Page.Resources>
+        <DataTemplate x:Key="StandardDoubleLineItemTemplate">
+            <Grid>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="Auto"/>
+                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="Auto"/>
+                </Grid.ColumnDefinitions>
+
+                <Border Background="{ThemeResource ListViewItemPlaceholderBackgroundThemeBrush}" Margin="0,9.5,0,0" Grid.Column="0" HorizontalAlignment="Left" VerticalAlignment="Top">
+                    <Image Source="{Binding Thumbnail}" Stretch="UniformToFill" AutomationProperties.Name="{Binding Title}" Height="79" Width="79"/>
+                </Border>
+                <StackPanel Grid.Column="1" Margin="14.5,0,0,0">
+                    <TextBlock TextWrapping="Wrap" Text="{Binding Title}" Style="{ThemeResource ListViewItemTextBlockStyle}"/>
+                    <TextBlock Text="{Binding Subtitle}" Style="{ThemeResource ListViewItemSubheaderTextBlockStyle}"/>
+                </StackPanel>
+                <StackPanel Grid.Column="2" Margin="14.5,0,0,0">
+                    <TextBlock Text="{Binding Price}" Style="{ThemeResource ListViewItemTextBlockStyle}"/>
+                </StackPanel>
+            </Grid>
+        </DataTemplate>
+    </Page.Resources>
     <Grid>
         <Pivot x:Uid="Pivot" Title="Servicios ML" x:Name="pivot" CommonNavigationTransitionInfo.IsStaggerElement="True">
             <!--Pivot item one-->
@@ -18,7 +40,6 @@
                 CommonNavigationTransitionInfo.IsStaggerElement="True">
                 <!--Double line list with text wrapping-->
                 <Maps:MapControl x:Name="mapServices" >
-                    
                 </Maps:MapControl>
             </PivotItem>
 
@@ -29,9 +50,19 @@
                 Header="Listado"
                 DataContext="{Binding SecondGroup}">
                 <!--Double line list no text wrapping-->
-
+                <ListView x:ConnectionId='1' x:Name="listServices"
+                        AutomationProperties.AutomationId="ItemListViewSection5"
+                        AutomationProperties.Name="Items In Group"
+                        SelectionMode="None"
+                        IsItemClickEnabled="True"
+                        ItemsSource="{Binding Items}"
+                        ItemTemplate="{StaticResource StandardDoubleLineItemTemplate}"
+                                                      
+                        ContinuumNavigationTransitionInfo.ExitElementContainer="True">
+                </ListView>
             </PivotItem>
         </Pivot>
+        
     </Grid>
 </Page>
 

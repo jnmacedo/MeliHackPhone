@@ -8,8 +8,61 @@
     mc:Ignorable="d"
     Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
 
-    <Grid>
-        <TextBox />
-        
-    </Grid>
+    <Page.Resources>
+        <DataTemplate x:Key="StandardDoubleLineItemTemplate">
+            <Grid>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="Auto"/>
+                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="Auto"/>
+                </Grid.ColumnDefinitions>
+
+                <Border Background="{ThemeResource ListViewItemPlaceholderBackgroundThemeBrush}" Margin="0,9.5,0,0" Grid.Column="0" HorizontalAlignment="Left" VerticalAlignment="Top">
+                </Border>
+                <StackPanel Grid.Column="1" Margin="14.5,0,0,0">
+                    <TextBlock TextWrapping="Wrap" Text="{Binding Name}" Style="{ThemeResource ListViewItemTextBlockStyle}"/>
+                    <TextBlock Text="{Binding Total_items_in_this_category}" Style="{ThemeResource ListViewItemSubheaderTextBlockStyle}"/>
+                </StackPanel>
+            </Grid>
+        </DataTemplate>
+    </Page.Resources>
+
+    <Pivot x:Uid="Pivot" Title="Servicios ML" x:Name="pivot" CommonNavigationTransitionInfo.IsStaggerElement="True">
+        <!--Pivot item one-->
+        <PivotItem
+                x:Uid="piMap"
+                Margin="19,14.5,0,0"
+                Header="Buscar Servicios"
+                CommonNavigationTransitionInfo.IsStaggerElement="True">
+            <ScrollViewer>
+                <StackPanel Orientation="Vertical">
+                    <Grid>
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="*"/>
+                            <ColumnDefinition Width="Auto"/>
+                        </Grid.ColumnDefinitions>
+
+                        <StackPanel Grid.Column="0">
+                            <TextBox x:Name="txbSearch" Margin="0,10,20,0"/>
+                        </StackPanel>
+                        <StackPanel Grid.Column="1">
+                            <Image x:Name="searchImage" Source="Assets/search_icon.png" Margin="0,12, 20,0" Tapped="searchImage_Tapped"></Image>
+                        </StackPanel>
+                    </Grid>
+                    <ListView x:Name="categoriesListView"
+                        AutomationProperties.AutomationId="ItemListViewSection1"
+                        AutomationProperties.Name="Items In Group"
+                        SelectionMode="None"
+                        IsItemClickEnabled="True"
+                        ItemsSource="{Binding Items}"
+                        ItemTemplate="{StaticResource StandardDoubleLineItemTemplate}"
+                        ItemClick="categoriesListView_ItemClick"
+                        ContinuumNavigationTransitionInfo.ExitElementContainer="True"
+                        Margin="0,20,10,10">
+                    </ListView>
+                    <ProgressRing x:Name="progressRing" Margin="0,150,0,0" IsActive="True"/>
+                </StackPanel>
+            </ScrollViewer>
+        </PivotItem>
+    </Pivot>
 </Page>

@@ -16,6 +16,14 @@ using Windows.UI.Xaml.Media;
 using Windows.UI.Xaml.Navigation;
 using Windows.Services.Maps;
 using Windows.Devices.Geolocation;
+using MeliHackPhone.Common;
+using Windows.Phone.UI.Input;
+using Windows.UI.Xaml.Shapes;
+using Windows.UI;
+using Windows.Storage.Streams;
+using System.Net;
+using Newtonsoft.Json.Linq;
+using Newtonsoft.Json;
 
 // The Blank Page item template is documented at http://go.microsoft.com/fwlink/?LinkID=390556
 
@@ -38,6 +46,10 @@ namespace MeliHackPhone
         /// This parameter is typically used to configure the page.</param>
         protected async override void OnNavigatedTo(NavigationEventArgs e)
         {
+            HttpWebRequest request = (HttpWebRequest)HttpWebRequest.Create(new System.Uri(e.Parameter.ToString()));
+            request.BeginGetResponse(new AsyncCallback(ReadWebRequestCallback), request);
+            
+
             Geolocator locator = new Geolocator();
             locator.DesiredAccuracyInMeters = 50;
 
@@ -46,11 +58,9 @@ namespace MeliHackPhone
             {
                 postition = await locator.GetGeopositionAsync();
                 Geopoint currentPosition = postition.Coordinate.Point;
-                //await mapServices.TrySetViewAsync(currentPosition, 15D);
+                await mapServices.TrySetViewAsync(currentPosition, 15D);
 
-                SetLocations(currentPosition);
-
-                Geocode(currentPosition);
+                SetLocations(currentPosition, "", false);
             }
             catch (Exception ex)
             {
@@ -58,43 +68,83 @@ namespace MeliHackPhone
             }
         }
 
-        private void SetLocations(Geopoint currentPosition)
+        private void SetLocations(Geopoint currentPosition, string title, bool serviceLocation)
         {
-            MapIcon MapIcon1 = new MapIcon();
-            MapIcon1.Location = currentPosition;
-            MapIcon1.NormalizedAnchorPoint = new Point(0.5, 1.0);
-            MapIcon1.Title = "Space Needle";
-            mapServices.MapElements.Add(MapIcon1);
+            MapIcon mapLocation = new MapIcon();
+            if (serviceLocation)
+                mapLocation.Image = RandomAccessStreamReference.CreateFromUri(new Uri("ms-appx:///Assets/service.png"));
+            else
+                mapLocation.Image = RandomAccessStreamReference.CreateFromUri(new Uri("ms-appx:///Assets/own.png"));
+
+            mapLocation.Title = title;
+            mapLocation.Location = currentPosition;
+            mapLocation.NormalizedAnchorPoint = new Point(0.5, 1.0);
+            mapServices.MapElements.Add(mapLocation);
         }
 
-        private async void Geocode(Geopoint currentPosition)
+        private void LoadItems(List<ServiceInfo> services)
         {
-            // Address or business to geocode.
-            string addressToGeocode = "colombes 1366";
-
-            // Nearby location to use as a query hint.
-            BasicGeoposition queryHint = new BasicGeoposition();
-            queryHint.Latitude = 47.643;
-            queryHint.Longitude = -122.131;
-            Geopoint hintPoint = new Geopoint(queryHint);
-
-            // Geocode the specified address, using the specified reference point
-            // as a query hint. Return no more than 3 results.
-            MapLocationFinderResult result =
-                await MapLocationFinder.FindLocationsAsync(
-                                    addressToGeocode,
-                                    currentPosition,
-                                    3);
-
-            // If the query returns results, display the coordinates
-            // of the first result.
-            if (result.Status == MapLocationFinderStatus.Success)
+            this.Dispatcher.RunAsync(Windows.UI.Core.CoreDispatcherPriority.Normal, () =>
             {
-                SetLocations(result.Locations[0].Point);
-                await mapServices.TrySetViewAsync(result.Locations[0].Point, 15D);
+                try
+                {
+                    listServices.ItemsSource = services;
+                    foreach (var service in services)
+                    {
+                        if (!String.IsNullOrWhiteSpace(service.Location.Latitude) && !String.IsNullOrWhiteSpace(service.Location.Longitude))
+                        {
+                            double latitud = Double.Parse(service.Location.Latitude);
+                            double longitude = Double.Parse(service.Location.Longitude);
+                            Geopoint geo = new Geopoint(new BasicGeoposition { Latitude = latitud, Longitude = longitude });
+                            SetLocations(geo, service.Title, true);
+                        }
+                    }
+                }
+                catch (Exception exc)
+                {
+                    throw new Exception("Failed to load items");
+                }
+            });
+        }
+
+        private void ItemView_ItemClick(object sender, ItemClickEventArgs e)
+        {
+            // Navigate to the appropriate destination page, configuring the new page
+            // by passing required information as a navigation parameter
+            var selectedService = (ServiceInfo)e.ClickedItem as ServiceInfo;
+            Frame.Navigate(typeof(ServiceDetail), selectedService);
+        }
+
+        private void ReadWebRequestCallback(IAsyncResult callbackResult)
+        {
+            HttpWebRequest myRequest = (HttpWebRequest)callbackResult.AsyncState;
+            using (HttpWebResponse myResponse = (HttpWebResponse)myRequest.EndGetResponse(callbackResult))
+            {
+                using (StreamReader httpwebStreamReader = new StreamReader(myResponse.GetResponseStream()))
+                {
+                    string results = httpwebStreamReader.ReadToEnd();
+                    //execute UI stuff on UI thread.
+                    this.parseServiceInfoJSON(results);
+                }
             }
         }
 
+        private void parseServiceInfoJSON(String serviceInfoJSON)
+        {
+            List<ServiceInfo> servicesInCategory = new List<ServiceInfo>();
 
+            JObject services = JObject.Parse(serviceInfoJSON);
+            IList<JToken> listOfServices = services["results"].Children().ToList();
+
+            foreach (JToken result in listOfServices)
+            {
+                ServiceInfo newServiceInfo = JsonConvert.DeserializeObject<ServiceInfo>(result.ToString());
+                servicesInCategory.Add(newServiceInfo);
+            }
+
+            LoadItems(servicesInCategory);
+        }
+
+        
     }
 }

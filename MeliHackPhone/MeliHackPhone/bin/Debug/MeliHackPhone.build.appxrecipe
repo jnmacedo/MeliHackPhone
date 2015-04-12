@@ -1,67 +1,149 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <PropertyGroup>
-    <Machine>LUIS-PC</Machine>
-    <WindowsUser>Luis</WindowsUser>
+    <Machine>TOBY-SURFACE</Machine>
+    <WindowsUser>Touby</WindowsUser>
     <TargetPlatformIdentifier>WindowsPhoneApp</TargetPlatformIdentifier>
     <SolutionConfiguration>Debug|AnyCPU</SolutionConfiguration>
     <PackageArchitecture>neutral</PackageArchitecture>
     <PackageIdentityName>3a95f5a1-e4ba-4750-a35e-505f699e49ff</PackageIdentityName>
-    <IntermediateOutputPath>C:\Solutions\MeliHackPhone\MeliHackPhone\MeliHackPhone\obj\Debug\</IntermediateOutputPath>
+    <IntermediateOutputPath>C:\VSO\MeliHackPhone\MeliHackPhone\MeliHackPhone\obj\Debug\</IntermediateOutputPath>
   </PropertyGroup>
   <ItemGroup>
-    <AppXManifest Include="C:\Solutions\MeliHackPhone\MeliHackPhone\MeliHackPhone\bin\Debug\AppxManifest.xml">
+    <AppXManifest Include="C:\VSO\MeliHackPhone\MeliHackPhone\MeliHackPhone\bin\Debug\AppxManifest.xml">
       <PackagePath>AppxManifest.xml</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
     </AppXManifest>
   </ItemGroup>
   <ItemGroup>
-    <AppxPackagedFile Include="C:\Solutions\MeliHackPhone\MeliHackPhone\MeliHackPhone\bin\Debug\MeliHackPhone.exe">
+    <AppxPackagedFile Include="C:\VSO\MeliHackPhone\MeliHackPhone\MeliHackPhone\bin\Debug\MeliHackPhone.exe">
       <PackagePath>MeliHackPhone.exe</PackagePath>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Solutions\MeliHackPhone\MeliHackPhone\MeliHackPhone\Assets\Logo.scale-240.png">
+    <AppxPackagedFile Include="C:\VSO\MeliHackPhone\MeliHackPhone\MeliHackPhone\bin\Debug\MeliHackPhone.exe.config">
+      <PackagePath>MeliHackPhone.exe.config</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\VSO\MeliHackPhone\MeliHackPhone\packages\Portable.BouncyCastle-Signed.1.7.0.1\lib\portable-net4+sl5+wp8+win8+wpa81\crypto.dll">
+      <PackagePath>crypto.dll</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\VSO\MeliHackPhone\MeliHackPhone\packages\Microsoft.Bcl.Async.1.0.168\lib\wpa81\Microsoft.Threading.Tasks.dll">
+      <PackagePath>Microsoft.Threading.Tasks.dll</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\VSO\MeliHackPhone\MeliHackPhone\packages\Microsoft.Bcl.Async.1.0.168\lib\wpa81\Microsoft.Threading.Tasks.Extensions.dll">
+      <PackagePath>Microsoft.Threading.Tasks.Extensions.dll</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\VSO\MeliHackPhone\MeliHackPhone\packages\Newtonsoft.Json.6.0.8\lib\portable-net40+sl5+wp80+win8+wpa81\Newtonsoft.Json.dll">
+      <PackagePath>Newtonsoft.Json.dll</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\VSO\MeliHackPhone\MeliHackPhone\packages\FubarCoder.RestSharp.Portable.2.4.1\lib\portable-net40+sl50+win+wpa81+wp80+MonoAndroid10+MonoTouch10+Xamarin.iOS10\RestSharp.Portable.dll">
+      <PackagePath>RestSharp.Portable.dll</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\VSO\MeliHackPhone\MeliHackPhone\packages\FubarCoder.RestSharp.Portable.OAuth.2.4.1\lib\portable-net40+sl50+win+wpa81+wp80+MonoAndroid10+MonoTouch10+Xamarin.iOS10\RestSharp.Portable.OAuth.dll">
+      <PackagePath>RestSharp.Portable.OAuth.dll</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\VSO\MeliHackPhone\MeliHackPhone\packages\Microsoft.Net.Http.2.2.28\lib\wpa81\System.Net.Http.Extensions.dll">
+      <PackagePath>System.Net.Http.Extensions.dll</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\VSO\MeliHackPhone\MeliHackPhone\packages\Microsoft.Net.Http.2.2.28\lib\wpa81\System.Net.Http.Primitives.dll">
+      <PackagePath>System.Net.Http.Primitives.dll</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\VSO\MeliHackPhone\MeliHackPhone\MeliHackPhone\Assets\Logo.scale-100.png">
+      <PackagePath>Assets\Logo.scale-100.png</PackagePath>
+      <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\VSO\MeliHackPhone\MeliHackPhone\MeliHackPhone\Assets\Logo.scale-140.png">
+      <PackagePath>Assets\Logo.scale-140.png</PackagePath>
+      <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\VSO\MeliHackPhone\MeliHackPhone\MeliHackPhone\Assets\Logo.scale-240.png">
       <PackagePath>Assets\Logo.scale-240.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Solutions\MeliHackPhone\MeliHackPhone\MeliHackPhone\Assets\SmallLogo.scale-240.png">
+    <AppxPackagedFile Include="C:\VSO\MeliHackPhone\MeliHackPhone\MeliHackPhone\Assets\search_icon.png">
+      <PackagePath>Assets\search_icon.png</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\VSO\MeliHackPhone\MeliHackPhone\MeliHackPhone\Assets\SmallLogo.scale-100.png">
+      <PackagePath>Assets\SmallLogo.scale-100.png</PackagePath>
+      <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\VSO\MeliHackPhone\MeliHackPhone\MeliHackPhone\Assets\SmallLogo.scale-140.png">
+      <PackagePath>Assets\SmallLogo.scale-140.png</PackagePath>
+      <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\VSO\MeliHackPhone\MeliHackPhone\MeliHackPhone\Assets\SmallLogo.scale-240.png">
       <PackagePath>Assets\SmallLogo.scale-240.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Solutions\MeliHackPhone\MeliHackPhone\MeliHackPhone\Assets\SplashScreen.scale-240.png">
+    <AppxPackagedFile Include="C:\VSO\MeliHackPhone\MeliHackPhone\MeliHackPhone\Assets\SplashScreen.scale-100.png">
+      <PackagePath>Assets\SplashScreen.scale-100.png</PackagePath>
+      <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\VSO\MeliHackPhone\MeliHackPhone\MeliHackPhone\Assets\SplashScreen.scale-140.png">
+      <PackagePath>Assets\SplashScreen.scale-140.png</PackagePath>
+      <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\VSO\MeliHackPhone\MeliHackPhone\MeliHackPhone\Assets\SplashScreen.scale-240.png">
       <PackagePath>Assets\SplashScreen.scale-240.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Solutions\MeliHackPhone\MeliHackPhone\MeliHackPhone\Assets\Square71x71Logo.scale-240.png">
+    <AppxPackagedFile Include="C:\VSO\MeliHackPhone\MeliHackPhone\MeliHackPhone\Assets\SplashScreenImage-1152x1920.png">
+      <PackagePath>Assets\SplashScreenImage-1152x1920.png</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\VSO\MeliHackPhone\MeliHackPhone\MeliHackPhone\Assets\SplashScreenImage-480x800.png">
+      <PackagePath>Assets\SplashScreenImage-480x800.png</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\VSO\MeliHackPhone\MeliHackPhone\MeliHackPhone\Assets\SplashScreenImage-672x1120.png">
+      <PackagePath>Assets\SplashScreenImage-672x1120.png</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\VSO\MeliHackPhone\MeliHackPhone\MeliHackPhone\Assets\Square71x71Logo.scale-100.png">
+      <PackagePath>Assets\Square71x71Logo.scale-100.png</PackagePath>
+      <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\VSO\MeliHackPhone\MeliHackPhone\MeliHackPhone\Assets\Square71x71Logo.scale-140.png">
+      <PackagePath>Assets\Square71x71Logo.scale-140.png</PackagePath>
+      <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\VSO\MeliHackPhone\MeliHackPhone\MeliHackPhone\Assets\Square71x71Logo.scale-240.png">
       <PackagePath>Assets\Square71x71Logo.scale-240.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Solutions\MeliHackPhone\MeliHackPhone\MeliHackPhone\Assets\StoreLogo.scale-240.png">
+    <AppxPackagedFile Include="C:\VSO\MeliHackPhone\MeliHackPhone\MeliHackPhone\Assets\StoreLogo.scale-240.png">
       <PackagePath>Assets\StoreLogo.scale-240.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Solutions\MeliHackPhone\MeliHackPhone\MeliHackPhone\Assets\WideLogo.scale-240.png">
+    <AppxPackagedFile Include="C:\VSO\MeliHackPhone\MeliHackPhone\MeliHackPhone\Assets\WideLogo.scale-100.png">
+      <PackagePath>Assets\WideLogo.scale-100.png</PackagePath>
+      <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\VSO\MeliHackPhone\MeliHackPhone\MeliHackPhone\Assets\WideLogo.scale-140.png">
+      <PackagePath>Assets\WideLogo.scale-140.png</PackagePath>
+      <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\VSO\MeliHackPhone\MeliHackPhone\MeliHackPhone\Assets\WideLogo.scale-240.png">
       <PackagePath>Assets\WideLogo.scale-240.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Solutions\MeliHackPhone\MeliHackPhone\MeliHackPhone\Assets\own.png">
+    <AppxPackagedFile Include="C:\VSO\MeliHackPhone\MeliHackPhone\MeliHackPhone\Assets\own.png">
       <PackagePath>Assets\own.png</PackagePath>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Solutions\MeliHackPhone\MeliHackPhone\MeliHackPhone\Assets\service.png">
+    <AppxPackagedFile Include="C:\VSO\MeliHackPhone\MeliHackPhone\MeliHackPhone\Assets\service.png">
       <PackagePath>Assets\service.png</PackagePath>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Solutions\MeliHackPhone\MeliHackPhone\MeliHackPhone\bin\Debug\App.xbf">
+    <AppxPackagedFile Include="C:\VSO\MeliHackPhone\MeliHackPhone\MeliHackPhone\bin\Debug\App.xbf">
       <PackagePath>App.xbf</PackagePath>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Solutions\MeliHackPhone\MeliHackPhone\MeliHackPhone\bin\Debug\MainPage.xbf">
+    <AppxPackagedFile Include="C:\VSO\MeliHackPhone\MeliHackPhone\MeliHackPhone\bin\Debug\MainPage.xbf">
       <PackagePath>MainPage.xbf</PackagePath>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Solutions\MeliHackPhone\MeliHackPhone\MeliHackPhone\bin\Debug\Services.xbf">
+    <AppxPackagedFile Include="C:\VSO\MeliHackPhone\MeliHackPhone\MeliHackPhone\bin\Debug\ServiceDetail.xbf">
+      <PackagePath>ServiceDetail.xbf</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\VSO\MeliHackPhone\MeliHackPhone\MeliHackPhone\bin\Debug\Services.xbf">
       <PackagePath>Services.xbf</PackagePath>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Solutions\MeliHackPhone\MeliHackPhone\MeliHackPhone\bin\Debug\MeliHackPhone.xr.xml">
+    <AppxPackagedFile Include="C:\VSO\MeliHackPhone\MeliHackPhone\MeliHackPhone\bin\Debug\MeliHackPhone.xr.xml">
       <PackagePath>MeliHackPhone.xr.xml</PackagePath>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Solutions\MeliHackPhone\MeliHackPhone\MeliHackPhone\bin\Debug\resources.pri">
+    <AppxPackagedFile Include="C:\VSO\MeliHackPhone\MeliHackPhone\MeliHackPhone\bin\Debug\resources.pri">
       <PackagePath>resources.pri</PackagePath>
     </AppxPackagedFile>
   </ItemGroup>

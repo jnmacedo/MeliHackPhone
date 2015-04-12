@@ -1,1 +1,1 @@
-C:\Solutions\MeliHackPhone\MeliHackPhone\MeliHackPhone\MeliHackPhone.csproj;neutral
+C:\VSO\MeliHackPhone\MeliHackPhone\MeliHackPhone\MeliHackPhone.csproj;neutral
